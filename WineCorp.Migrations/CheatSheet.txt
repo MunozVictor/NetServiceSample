@@ -1,0 +1,9 @@
+﻿//IN WineCorp.Migrations folder:
+dotnet nuget list source
+dotnet tool install --global dotnet-ef
+dotnet ef database drop
+dotnet ef database update PreviousMigration
+
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
